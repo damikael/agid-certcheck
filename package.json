@@ -1,0 +1,12 @@
+{
+    "name": "AgID CertCheck",
+    "version": "1.0.0",
+    "description": "Utility per la verifica dei certificati X509 emessi da AgID",
+    "main": "agid-certcheck.js",
+    "bin": "agid-certcheck.js",
+    "author": "Michele D'Amico (@damikael)",
+    "dependencies": {
+        "x509": "^0.3.4",
+        "yargs": "^15.3.1"
+    }
+}
