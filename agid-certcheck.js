@@ -22,8 +22,10 @@ yargs
         let json = argv['json'];
 
         try {
-            let file = fs.readFileSync(filename);
+            let filecontent = fs.readFileSync(filename);
             let agidcert = new AgidCertificate(filename);
+
+            
             let policies = agidcert.getPolicies();
             for(oid in policies) {
                 console.log('OID: ' + oid + ' (' + policies[oid] + ')');
@@ -32,6 +34,7 @@ yargs
             if(json) {
                 fs.writeFileSync(json, JSON.stringify(policies));
             }
+            
 
         } catch(exception) {
             console.log("Error: " + exception.toString());
